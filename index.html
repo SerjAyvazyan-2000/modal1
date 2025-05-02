@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="open-modal-btn">Открыть модалку</button>
+
+
+<div class="overlay" id="modalOverlay">
+    <div class="modal">
+        <h2>Спасибо за использование пробной версии ChatGPT</h2>
+        <p>Войдите или зарегистрируйтесь, чтобы получать более умные ответы, загружать файлы и изображения и многое другое.</p>
+        <div class="modal-buttons">
+            <button class="btn btn-login">Войти</button>
+            <button class="btn btn-register">Зарегистрироваться бесплатно</button>
+        </div>
+        <a href="#">Не входить</a>
+    </div>
+</div>
+
+<script>
+    const openBtn = document.querySelector('.open-modal-btn');
+    const overlay = document.getElementById('modalOverlay');
+
+    openBtn.addEventListener('click', () => {
+        overlay.classList.add('active');
+    });
+
+
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.classList.remove('active');
+        }
+    });
+</script>
+</body>
+</html>

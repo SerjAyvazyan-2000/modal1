@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+}
+
+.open-modal-btn {
+    margin: 40px auto;
+    display: block;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.open-modal-btn:hover {
+    background-color: #333;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+    padding: 0 15px;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.modal {
+    background: #fff;
+    border-radius: 24px;
+    max-width: 500px;
+    width: 90%;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.modal p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-login {
+    background: #000;
+    color: #fff;
+    border: none;
+}
+
+.btn-login:hover {
+    background: #333;
+}
+
+.btn-register {
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+}
+
+.btn-register:hover {
+    background: #f2f2f2;
+}
+
+.modal a {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.modal a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+@media (min-width: 600px) {
+    .modal h2 {
+        font-size: 22px;
+    }
+
+    .modal p {
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+
+
+}
