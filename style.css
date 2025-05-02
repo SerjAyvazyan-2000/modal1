@@ -27,7 +27,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     z-index: 999;
     visibility: hidden;
     opacity: 0;
@@ -51,6 +51,7 @@ body {
     position: relative;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     animation: fadeInUp 0.3s ease;
+    margin-bottom: 40px;
 }
 
 @keyframes fadeInUp {
